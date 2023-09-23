@@ -11,7 +11,7 @@ class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .systemBackground
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
         let vc2 = UINavigationController(rootViewController: GenreViewController())
@@ -19,6 +19,9 @@ class MainTabBarViewController: UITabBarController {
         
         vc1.tabBarItem.image = UIImage(systemName: "house")
         vc2.tabBarItem.image = UIImage(systemName: "book")
+        
+        vc1.tabBarItem.badgeColor = .systemBackground
+        vc2.tabBarItem.badgeColor = .systemBackground
         
         vc1.title = "Home"
         vc2.title = "Genre"

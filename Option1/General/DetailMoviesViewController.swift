@@ -15,14 +15,15 @@ class DetailMovieViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 22, weight: .bold)
-        label.text = "Harry poter"
+        label.textColor = .systemGray
         return label
     }()
     
     private let overviewLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 22, weight: .bold)
+        label.font = .systemFont(ofSize: 22, weight: .semibold)
+        label.textColor = .systemGray
         label.numberOfLines = 0
         label.text = "This is the best movies i ever watch"
         return label
@@ -33,12 +34,16 @@ class DetailMovieViewController: UIViewController {
     private let webView: WKWebView =  {
         let webView = WKWebView()
         webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.backgroundColor = .systemBackground
         return webView
     }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        view.backgroundColor = .systemBackground
         
         
         view.addSubview(webView)
@@ -53,7 +58,7 @@ class DetailMovieViewController: UIViewController {
     func configureConstraint() {
         let webViewContraint = [
         
-            webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            webView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             webView.heightAnchor.constraint(equalToConstant: 250)

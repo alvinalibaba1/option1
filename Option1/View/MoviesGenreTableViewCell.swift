@@ -14,6 +14,7 @@ class MoviesGenreTableViewCell: UITableViewCell {
     
     private let playTittleButton: UIButton = {
         let button = UIButton()
+        button.setImage(UIImage(systemName: "play.circle"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -61,8 +62,16 @@ class MoviesGenreTableViewCell: UITableViewCell {
         
         ]
         
+        let playTitleButtonConstraint = [
+        
+            playTittleButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 20),
+            playTittleButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            
+        ]
+        
         NSLayoutConstraint.activate(moviesLabelConstraint)
         NSLayoutConstraint.activate(moviesPosterImageViewConstraint)
+        NSLayoutConstraint.activate(playTitleButtonConstraint)
     }
     
     

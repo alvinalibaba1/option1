@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemGroupedBackground
         view.addSubview(homeFeedTable)
         
         homeFeedTable.delegate = self
@@ -39,11 +39,6 @@ class HomeViewController: UIViewController {
         homeFeedTable.tableHeaderView = headerView
         
         APICaller.shared.getFilterGenreMovie(with: "28" ) { result in
-            //
-        }
-        
-        
-        APICaller.shared.getGenreMovie { result in
             //
         }
         

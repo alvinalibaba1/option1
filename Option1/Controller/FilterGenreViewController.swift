@@ -18,7 +18,8 @@ class FilterGenreViewController: UIViewController{
     
     private var data: [Data] = [Data]()
     
-    var genres: [[String:String]]!
+    private var genres: [GenresFilm ] = [GenresFilm]()
+    
     
     private let tableGenre: UITableView = {
         let table = UITableView()
@@ -36,7 +37,7 @@ class FilterGenreViewController: UIViewController{
         
 //        genres = genresList()
     
-        
+        fetchGenre()
     }
     
     
@@ -49,10 +50,15 @@ class FilterGenreViewController: UIViewController{
     
     func fetchGenre() {
         
-        APICaller.shared.getGenreMovie { result in
+        APICaller.shared.getGenreMovie { [weak self] result in
             switch result {
-            case .success(let success):
-                
+            case .success(let data):
+                self?.genres = data
+                DispatchQueue.main.async {
+                    self?.tableGenre.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
@@ -80,7 +86,7 @@ class FilterGenreViewController: UIViewController{
 extension FilterGenreViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return genres.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,32 +95,34 @@ extension FilterGenreViewController: UITableViewDelegate, UITableViewDataSource 
         }
         
         let genre = genres[indexPath.row]
-        cell.genresLabel.text = genre["name"]
+        cell.genresLabel.text = genre.name
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let data = data[indexPath.row]
         
-        let genre = genres[indexPath.row]["id"]!
+//        let genre = genres[indexPath.row]["id"]!
         
         guard let titleName = data.original_title ?? data.original_name else {
             return
         }
-        
+//        
 //        APICaller.shared.getFilterGenreMovie(with: genre) { result in
 //            switch result {
 //            case .success(let pickGenre):
 //                print(genres.id)
+//            case .failure(let error):
+//                print()
 //            }
 //        }
-//
+
         tableView.deselectRow(at: indexPath, animated: true)
         
         tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
         
         
-        delegate?.genresViewController?(genresViewController: self, selectedGenre: genre)
+//        delegate?.genresViewController?(genresViewController: self, selectedGenre: genres)
         
         dismiss(animated: true, completion: nil)
     }
