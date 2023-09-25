@@ -15,7 +15,7 @@ class DetailMovieViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 22, weight: .bold)
-        label.textColor = .systemGray
+        label.textColor = .lightGray
         return label
     }()
     
@@ -23,7 +23,7 @@ class DetailMovieViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 22, weight: .semibold)
-        label.textColor = .systemGray
+        label.textColor = .lightGray
         label.numberOfLines = 0
         label.text = "This is the best movies i ever watch"
         return label
