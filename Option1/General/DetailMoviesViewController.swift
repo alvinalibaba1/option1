@@ -11,6 +11,16 @@ import WebKit
 class DetailMovieViewController: UIViewController {
     
     
+    private let reviewsButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Reviews", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 15
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    
     private let moviesTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +32,7 @@ class DetailMovieViewController: UIViewController {
     private let overviewLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 22, weight: .semibold)
+        label.font = .systemFont(ofSize: 15, weight: .semibold)
         label.textColor = .lightGray
         label.numberOfLines = 0
         label.text = "This is the best movies i ever watch"
@@ -49,9 +59,19 @@ class DetailMovieViewController: UIViewController {
         view.addSubview(webView)
         view.addSubview(moviesTitleLabel)
         view.addSubview(overviewLabel)
+        view.addSubview(reviewsButton)
         
+        reviewsButton.addTarget(self, action: #selector(buttonReviews), for: .touchUpInside)
         
         configureConstraint()
+    }
+    
+    
+    @objc func buttonReviews()  {
+        DispatchQueue.main.async {
+            let vc = ReviewViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     
@@ -81,9 +101,20 @@ class DetailMovieViewController: UIViewController {
         
         ]
         
+        
+        let reviewsButtonConstraint = [
+        
+            reviewsButton.topAnchor.constraint(equalTo: overviewLabel.bottomAnchor, constant: 20),
+            reviewsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20),
+            reviewsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        
+        ]
+        
+    
         NSLayoutConstraint.activate(webViewContraint)
         NSLayoutConstraint.activate(moviesTitleLabelConstraint)
         NSLayoutConstraint.activate(overviewLabelConstraint)
+        NSLayoutConstraint.activate(reviewsButtonConstraint)
     }
     
     

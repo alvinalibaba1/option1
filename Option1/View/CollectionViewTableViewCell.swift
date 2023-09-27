@@ -103,8 +103,8 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
                 guard let titleOverview = data?.overview else {
                     return
                 }
-                guard let strongSelf = self else { return
-                    
+                guard let strongSelf = self else {
+                    return
                 }
                 let viewModel = DetailMovieViewModel(title: titleName , youtubeView: videoElement, titleOverview: titleOverview)
                 self?.delegate?.collectionViewTableViewCellDidTapCell(strongSelf, viewModel: viewModel)

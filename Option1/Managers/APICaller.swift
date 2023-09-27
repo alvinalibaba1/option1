@@ -8,6 +8,10 @@
 import Foundation
 
 
+enum idMovies: Int {
+    case id
+}
+
 struct Constants  {
     static let API_KEY = "3651a4275e6ef581913cf914516b44e5"
     static let baseURL = "https://api.themoviedb.org"
@@ -209,5 +213,31 @@ class APICaller {
     }
     
 
+    
+    
+    func getReviewMovie(idMovies: Int, completion: @escaping (Result<[ReviewsMovie], Error>) -> Void) {
+        
+        guard let url = URL(string: "\(Constants.baseURL)/3/movie/\(idMovies)/reviews?language=en-US&page=1&api_key=\(Constants.API_KEY)") else { return }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _ , error in
+            guard let data = data , error == nil else {
+                return
+            }
+            
+            do {
+                let results = try JSONDecoder().decode(ReviewMoviesResponse.self, from: data)
+                completion(.success(results.results))
+                print(results)
+                
+            } catch {
+                completion(.failure(error))
+                print(error.localizedDescription)
+            }
+        }
+        task.resume()
+            
+    }
+    
+//https://api.themoviedb.org/3/movie/346698/reviews?language=en-US&page=1&api_key=3651a4275e6ef581913cf914516b44e5
     
 }

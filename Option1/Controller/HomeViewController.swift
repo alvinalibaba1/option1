@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     
     let sectionTittle: [String] = ["Fantasy", "Action", "History", "Romance", "War"]
     
+    
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)

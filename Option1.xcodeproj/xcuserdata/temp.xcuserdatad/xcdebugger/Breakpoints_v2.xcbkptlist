@@ -62,8 +62,8 @@
             filePath = "Option1/Managers/APICaller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "getMovie(with:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "Option1/Managers/APICaller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "getMovie(with:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "Option1/Managers/APICaller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "getMovie(with:completion:)"
             landmarkType = "7">
             <Locations>
@@ -157,8 +157,8 @@
             filePath = "Option1/Managers/APICaller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
             landmarkName = "getMovie(with:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -173,10 +173,341 @@
             filePath = "Option1/Managers/APICaller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
             landmarkName = "APICaller"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2B000C6-1DEE-432B-AB70-C689CD31FDD5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/View/ReviewTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "labelNameReview"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0CA4F00B-9AD3-4A5C-B5D6-D186C1773463"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/View/ReviewTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "labelNameReview"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "0CA4F00B-9AD3-4A5C-B5D6-D186C1773463 - 665186bf3661ab6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UILabel in variable initialization expression of Option1.ReviewTableViewCell.labelNameReview : __C.UILabel"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/View/ReviewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  uuid = "0CA4F00B-9AD3-4A5C-B5D6-D186C1773463 - 665186bf3661a823"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UILabel in variable initialization expression of Option1.ReviewTableViewCell.labelNameReview : __C.UILabel"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/View/ReviewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "53">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11601523-728C-479B-BFAF-11C675E797D1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/View/ReviewTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "labelNameReview"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "11601523-728C-479B-BFAF-11C675E797D1 - 665186bf3661ab0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UILabel in variable initialization expression of Option1.ReviewTableViewCell.labelNameReview : __C.UILabel"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/View/ReviewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "11601523-728C-479B-BFAF-11C675E797D1 - c8baff1993bcf3f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Option1.ReviewTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Option1.ReviewTableViewCell"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/View/ReviewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "123">
+               </Location>
+               <Location
+                  uuid = "11601523-728C-479B-BFAF-11C675E797D1 - 95085597b2cccae8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Option1.ReviewTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Option1.ReviewTableViewCell&gt;"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/View/ReviewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "78">
+               </Location>
+               <Location
+                  uuid = "11601523-728C-479B-BFAF-11C675E797D1 - 665186bf3661abc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UILabel in variable initialization expression of Option1.ReviewTableViewCell.labelNameReview : __C.UILabel"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/View/ReviewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  uuid = "11601523-728C-479B-BFAF-11C675E797D1 - c8baff1993bcf33e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Option1.ReviewTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Option1.ReviewTableViewCell"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/View/ReviewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "173">
+               </Location>
+               <Location
+                  uuid = "11601523-728C-479B-BFAF-11C675E797D1 - 95085597b2ccca22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Option1.ReviewTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Option1.ReviewTableViewCell&gt;"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/View/ReviewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C228468E-4363-4AD4-8D39-FA3F9D4BF6CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/Controller/ReviewViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "reviewTable"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "C228468E-4363-4AD4-8D39-FA3F9D4BF6CC - 39f4b36fa787b3c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UITableView in variable initialization expression of Option1.ReviewViewController.reviewTable : __C.UITableView"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/Controller/ReviewViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "C228468E-4363-4AD4-8D39-FA3F9D4BF6CC - 6a8a9f3dd2a173df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Option1.ReviewViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Option1.ReviewViewController"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/Controller/ReviewViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "C228468E-4363-4AD4-8D39-FA3F9D4BF6CC - 21331aa73a20d800"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Option1.ReviewViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Option1.ReviewViewController&gt;"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/Controller/ReviewViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "225">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3F2CE78-EA8C-4703-A9A7-AA5070FACE13"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/Controller/ReviewViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "ReviewViewController"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "873B3D91-2CA9-4831-A353-1BC9A4223C1B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/Controller/ReviewViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "ReviewViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5438168E-3796-4A9B-A5F5-6F8BB0FDA49B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/Controller/ReviewViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "viewDidLayoutSubviews()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5438168E-3796-4A9B-A5F5-6F8BB0FDA49B - 8832ed72c0c0b264"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Option1.ReviewViewController.viewDidLayoutSubviews() -&gt; ()"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/Controller/ReviewViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  uuid = "5438168E-3796-4A9B-A5F5-6F8BB0FDA49B - 8832ed72c0c0b207"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Option1.ReviewViewController.viewDidLayoutSubviews() -&gt; ()"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/Controller/ReviewViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "86">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F161B72D-1C61-48BE-9EBC-CD8A99DBB88D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/Controller/ReviewViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewDidLayoutSubviews()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
