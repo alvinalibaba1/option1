@@ -10,6 +10,16 @@ import WebKit
 
 class DetailMovieViewController: UIViewController {
     
+    var viewModel: DetailMovieViewModel
+    
+    init(viewModel: DetailMovieViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private let reviewsButton: UIButton = {
         let button = UIButton()
@@ -67,9 +77,9 @@ class DetailMovieViewController: UIViewController {
     }
     
     
-    @objc func buttonReviews()  {
+    @objc func buttonReviews(_ sender: UIButton)  {
         DispatchQueue.main.async {
-            let vc = ReviewViewController()
+            let vc = ReviewViewController(movieID: (self.viewModel.movie.id))
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -118,11 +128,12 @@ class DetailMovieViewController: UIViewController {
     }
     
     
-    func configure(with model: DetailMovieViewModel) {
-        moviesTitleLabel.text = model.title
-        overviewLabel.text = model.titleOverview
+    public func configure(with viewModel: DetailMovieViewModel) {
+        moviesTitleLabel.text = viewModel.movie.original_title
+        overviewLabel.text = viewModel.movie.overview
         
-        guard let url = URL(string: "https://www.youtube.com/embed/\(model.youtubeView.id.videoId ?? "")") else {
+        
+        guard let url = URL(string: "https://www.youtube.com/embed/\(viewModel.youtubeView.id.videoId ?? "")") else {
             return
         }
         webView.load(URLRequest(url: url))

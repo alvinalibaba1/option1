@@ -14,8 +14,8 @@
             filePath = "Option1/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -361,8 +361,8 @@
             filePath = "Option1/Controller/ReviewViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "reviewTable"
             landmarkType = "24">
             <Locations>
@@ -424,8 +424,8 @@
             filePath = "Option1/Controller/ReviewViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "ReviewViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -440,8 +440,8 @@
             filePath = "Option1/Controller/ReviewViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "ReviewViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -456,8 +456,8 @@
             filePath = "Option1/Controller/ReviewViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "viewDidLayoutSubviews()"
             landmarkType = "7">
             <Locations>
@@ -504,10 +504,170 @@
             filePath = "Option1/Controller/ReviewViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "viewDidLayoutSubviews()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BA396D8-CF34-4DE9-997B-4EB7B09E367E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "getMovie(with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6BA396D8-CF34-4DE9-997B-4EB7B09E367E - 7b84392c1ade3041"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Option1.APICaller.getMovie(with: Swift.String, completion: (Swift.Result&lt;Option1.VideoElement, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/Managers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "187"
+                  endingLineNumber = "187"
+                  offsetFromSymbolStart = "770">
+               </Location>
+               <Location
+                  uuid = "6BA396D8-CF34-4DE9-997B-4EB7B09E367E - 7b84392c1ade3041"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Option1.APICaller.getMovie(with: Swift.String, completion: (Swift.Result&lt;Option1.VideoElement, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/Managers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "187"
+                  endingLineNumber = "187"
+                  offsetFromSymbolStart = "1438">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C325E8A5-75F8-4D41-B6DD-4E5A84B3D26D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/View/CollectionViewTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C325E8A5-75F8-4D41-B6DD-4E5A84B3D26D - 9a3535fbe231b4ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Option1.VideoElement, Swift.Error&gt;) -&gt; () in Option1.CollectionViewTableViewCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/View/CollectionViewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "490">
+               </Location>
+               <Location
+                  uuid = "C325E8A5-75F8-4D41-B6DD-4E5A84B3D26D - 9a3535fbe231b51e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Option1.VideoElement, Swift.Error&gt;) -&gt; () in Option1.CollectionViewTableViewCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/View/CollectionViewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "467">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E7DCE01-0DC6-45C5-B0A4-5F15C1E80521"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/General/DetailMoviesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "buttonReviews(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B0E6BCB-5C13-4592-AC88-B8B4F71A5BC1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Option1/General/DetailMoviesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "buttonReviews(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4B0E6BCB-5C13-4592-AC88-B8B4F71A5BC1 - f19fb01d0ba4c0cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Option1.DetailMovieViewController.configureConstraint() -&gt; ()"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/General/DetailMoviesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "133">
+               </Location>
+               <Location
+                  uuid = "4B0E6BCB-5C13-4592-AC88-B8B4F71A5BC1 - 97324b5b12ed85de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Option1.DetailMovieViewController.buttonReviews(__C.UIButton) -&gt; ()"
+                  moduleName = "Option1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/temp/Documents/Option1/Option1/General/DetailMoviesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "131">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

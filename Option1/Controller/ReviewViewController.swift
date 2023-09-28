@@ -9,13 +9,21 @@ import UIKit
 
 class ReviewViewController: UIViewController {
     
-    var fantasy: [Data] = [Data]()
+    var movieID: Int
+    
         
     var review: [ReviewsMovie] = [ReviewsMovie]()
     
     weak var delegate2: CollectionViewTableViewCellDelegate?
     
+    init(movieID: Int, delegate2: CollectionViewTableViewCellDelegate? = nil) {
+        self.movieID = movieID
+        super.init(nibName: nil, bundle: nil)
+    }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private let reviewTable: UITableView = {
         let table = UITableView()
@@ -31,7 +39,7 @@ class ReviewViewController: UIViewController {
         reviewTable.delegate = self
         reviewTable.dataSource = self
         view.addSubview(reviewTable)
-        fetchMovies()
+        fetchMovies(moviesID: movieID)
         
     }
     
@@ -40,9 +48,9 @@ class ReviewViewController: UIViewController {
         reviewTable.frame = view.bounds
     }
     
-    func fetchMovies(id: idMovies = .id){
+    func fetchMovies(moviesID: Int){
         
-        APICaller.shared.getReviewMovie(idMovies: id.rawValue) { [weak self] result in
+        APICaller.shared.getReviewsMovie(idMovie: moviesID) { [weak self] result in
             switch result {
             case .success(let success):
                 self?.review = success
@@ -87,12 +95,3 @@ extension ReviewViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-
-
-//extension ReviewViewController: ReviewsTableViewCellDelegate {
-//    func reviesTableViewCellDidtap(_ cell: ReviewTableViewCell, viewModel: ReviewMoviesViewModel) {
-//        DispatchQueue.main.async { [weak self] in
-////            let vc = 
-//        }
-//    }
-//}

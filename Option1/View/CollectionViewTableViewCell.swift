@@ -16,7 +16,7 @@ class CollectionViewTableViewCell: UITableViewCell {
 
    static let identifier = "CollectionViewTableViewCell"
     
-    private var fantasy: [Data] = [Data]()
+    private var moviesResponse: [MoviesResponse] = [MoviesResponse]()
     
     weak var delegate: CollectionViewTableViewCellDelegate?
 
@@ -54,8 +54,8 @@ class CollectionViewTableViewCell: UITableViewCell {
         collectionView.frame = contentView.bounds
     }
     
-    public func configure(with genres: [Data]) {
-        self.fantasy = genres
+    public func configure(with genres: [MoviesResponse]) {
+        self.moviesResponse = genres
         DispatchQueue.main.async { [weak self] in
             self?.collectionView.reloadData()
         }
@@ -72,7 +72,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
             return UICollectionViewCell()
         }
         
-        guard let model = fantasy[indexPath.row].poster_path else {
+        guard let model = moviesResponse[indexPath.row].poster_path else {
             return UICollectionViewCell()
         }
         cell.configure(with: model)
@@ -81,32 +81,26 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fantasy.count
+        return moviesResponse.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
         
-        let data = fantasy[indexPath.row]
-        
-        guard let titleName = data.original_title ?? data.original_name else {
-            return
-        }
+        let data = moviesResponse[indexPath.row]
         
         
-        APICaller.shared.getMovie(with: titleName + "trailer") {[weak self] result in
+        
+        APICaller.shared.getMovie(with: (data.original_title ?? "") + "trailer") {[weak self] result in
             switch result {
             case .success(let videoElement):
                 
-                let data = self?.fantasy[indexPath.row]
-                guard let titleOverview = data?.overview else {
-                    return
-                }
                 guard let strongSelf = self else {
                     return
                 }
-                let viewModel = DetailMovieViewModel(title: titleName , youtubeView: videoElement, titleOverview: titleOverview)
+        
+                let viewModel = DetailMovieViewModel(youtubeView: videoElement, movie: data)
                 self?.delegate?.collectionViewTableViewCellDidTapCell(strongSelf, viewModel: viewModel)
                 
             case .failure(let error):

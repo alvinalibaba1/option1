@@ -88,8 +88,8 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
         case Sections.Action.rawValue:
             APICaller.shared.getActionMovies{ result in
                 switch result {
-                case .success(let genres):
-                    cell.configure(with: genres)
+                case .success(let actionMovies):
+                    cell.configure(with: actionMovies)
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
@@ -167,7 +167,7 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
 extension HomeViewController: CollectionViewTableViewCellDelegate {
     func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: DetailMovieViewModel) {
         DispatchQueue.main.async { [weak self] in
-            let vc = DetailMovieViewController()
+            let vc = DetailMovieViewController(viewModel: viewModel)
             vc.configure(with: viewModel)
             self?.navigationController?.pushViewController(vc, animated: true)
         }
