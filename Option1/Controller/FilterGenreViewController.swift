@@ -50,7 +50,7 @@ class FilterGenreViewController: UIViewController{
     
     func fetchGenre() {
         
-        APICaller.shared.getGenreMovie { [weak self] result in
+        APICaller.shared.getGenreMovie{ [weak self] result in
             switch result {
             case .success(let data):
                 self?.genres = data

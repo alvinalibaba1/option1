@@ -12,6 +12,7 @@ struct GenreMoviesResponse: Codable {
 }
 
 struct MoviesResponse: Codable {
+    let genre_ids: [Int]
     let id: Int
     let media_type: String?
     let original_name: String?
@@ -21,4 +22,5 @@ struct MoviesResponse: Codable {
     let vote_count: Int
     let release_date: String
     let vote_average: Double
+    
 }

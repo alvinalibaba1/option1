@@ -19,6 +19,8 @@ class CollectionViewTableViewCell: UITableViewCell {
     private var moviesResponse: [MoviesResponse] = [MoviesResponse]()
     
     weak var delegate: CollectionViewTableViewCellDelegate?
+    
+    let genre: [GenresFilm] = [GenresFilm]()
 
     
     private let collectionView: UICollectionView = {
@@ -60,6 +62,7 @@ class CollectionViewTableViewCell: UITableViewCell {
             self?.collectionView.reloadData()
         }
     }
+    
 }
 
 
@@ -90,7 +93,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         
         let data = moviesResponse[indexPath.row]
         
-        
+        let genres = genre[indexPath.row]
         
         APICaller.shared.getMovie(with: (data.original_title ?? "") + "trailer") {[weak self] result in
             switch result {
@@ -99,13 +102,13 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
                 guard let strongSelf = self else {
                     return
                 }
-        
-                let viewModel = DetailMovieViewModel(youtubeView: videoElement, movie: data)
+                let viewModel = DetailMovieViewModel(youtubeView: videoElement, movie: data, genres: genres)
                 self?.delegate?.collectionViewTableViewCellDidTapCell(strongSelf, viewModel: viewModel)
                 
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
+        
     }
 }

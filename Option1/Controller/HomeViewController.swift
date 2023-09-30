@@ -19,6 +19,7 @@ enum Sections: Int {
 class HomeViewController: UIViewController {
     
     let sectionTittle: [String] = ["Fantasy", "Action", "History", "Romance", "War"]
+
     
     
     private let homeFeedTable: UITableView = {

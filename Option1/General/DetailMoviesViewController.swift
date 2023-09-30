@@ -11,6 +11,8 @@ import WebKit
 class DetailMovieViewController: UIViewController {
     
     var viewModel: DetailMovieViewModel
+
+    var genresFilm: [GenresFilm] = [GenresFilm]()
     
     init(viewModel: DetailMovieViewModel) {
         self.viewModel = viewModel
@@ -21,6 +23,7 @@ class DetailMovieViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     private let reviewsButton: UIButton = {
         let button = UIButton()
         button.setTitle("Reviews", for: .normal)
@@ -30,6 +33,33 @@ class DetailMovieViewController: UIViewController {
         return button
     }()
     
+    
+    private let releaseLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Release date:"
+        return label
+    }()
+    
+    private let releaseLabel2: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    
+    private let genreLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Genre: "
+        return label
+    }()
+    
+    private var genreLabel2: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     private let moviesTitleLabel: UILabel = {
         let label = UILabel()
@@ -70,10 +100,16 @@ class DetailMovieViewController: UIViewController {
         view.addSubview(moviesTitleLabel)
         view.addSubview(overviewLabel)
         view.addSubview(reviewsButton)
+        view.addSubview(releaseLabel)
+        view.addSubview(releaseLabel2)
+        view.addSubview(genreLabel)
+        view.addSubview(genreLabel2)
         
         reviewsButton.addTarget(self, action: #selector(buttonReviews), for: .touchUpInside)
         
         configureConstraint()
+        
+        fetchGenre()
     }
     
     
@@ -83,6 +119,7 @@ class DetailMovieViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
+
     
     
     func configureConstraint() {
@@ -103,9 +140,44 @@ class DetailMovieViewController: UIViewController {
             
         ]
         
+        let releaseLabelConstraint = [
+        
+            releaseLabel.topAnchor.constraint(equalTo: moviesTitleLabel.bottomAnchor, constant: 20),
+            releaseLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            releaseLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            
+        ]
+        
+        
+        let releaseLabelConstraint2 = [
+        
+            releaseLabel2.topAnchor.constraint(equalTo: moviesTitleLabel.bottomAnchor, constant: 20),
+            releaseLabel2.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 130),
+            releaseLabel2.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            
+        ]
+        
+        let genreLabelConstraint = [
+        
+            genreLabel.topAnchor.constraint(equalTo: releaseLabel.bottomAnchor, constant: 20),
+            genreLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            genreLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            
+        ]
+        
+        let genreLabelConstraint2 = [
+        
+            genreLabel2.topAnchor.constraint(equalTo: releaseLabel2.bottomAnchor, constant: 20),
+            genreLabel2.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 130),
+            genreLabel2.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            
+        ]
+        
+        
+        
         let overviewLabelConstraint = [
         
-            overviewLabel.topAnchor.constraint(equalTo: moviesTitleLabel.bottomAnchor, constant: 15),
+            overviewLabel.topAnchor.constraint(equalTo: moviesTitleLabel.bottomAnchor, constant: 150),
             overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20),
             overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         
@@ -115,8 +187,8 @@ class DetailMovieViewController: UIViewController {
         let reviewsButtonConstraint = [
         
             reviewsButton.topAnchor.constraint(equalTo: overviewLabel.bottomAnchor, constant: 20),
-            reviewsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20),
-            reviewsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            reviewsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 10),
+            reviewsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -180),
         
         ]
         
@@ -125,13 +197,37 @@ class DetailMovieViewController: UIViewController {
         NSLayoutConstraint.activate(moviesTitleLabelConstraint)
         NSLayoutConstraint.activate(overviewLabelConstraint)
         NSLayoutConstraint.activate(reviewsButtonConstraint)
+        NSLayoutConstraint.activate(releaseLabelConstraint)
+        NSLayoutConstraint.activate(releaseLabelConstraint2)
+        NSLayoutConstraint.activate(genreLabelConstraint)
+        NSLayoutConstraint.activate(genreLabelConstraint2)
+        
     }
     
+    
+    func fetchGenre() {
+        
+        APICaller.shared.getGenresMovie2(idMovie: viewModel.movie.id) { result in
+            switch result {
+            case .success(let success):
+                self.genresFilm = success
+                self.genreLabel2.text = self.viewModel.genres.name
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    
+
     
     public func configure(with viewModel: DetailMovieViewModel) {
         moviesTitleLabel.text = viewModel.movie.original_title
         overviewLabel.text = viewModel.movie.overview
-        
+        releaseLabel2.text = viewModel.movie.release_date
+        genreLabel2.text = viewModel.genres.name
+
         
         guard let url = URL(string: "https://www.youtube.com/embed/\(viewModel.youtubeView.id.videoId ?? "")") else {
             return
