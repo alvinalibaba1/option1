@@ -8,8 +8,14 @@
 import Foundation
 
 
-struct DetailMovieViewModel {
-    let title: String
+class DetailMovieViewModel {
     let youtubeView: VideoElement
-    let titleOverview: String
+    
+    let movie: MoviesResponse
+    
+    
+    init(youtubeView: VideoElement, movie: MoviesResponse) {
+        self.youtubeView = youtubeView
+        self.movie = movie
+    }
 }
