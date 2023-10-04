@@ -13,9 +13,11 @@ class DetailMovieViewModel {
     
     let movie: MoviesResponse
     
+    let genres: GenresFilm
     
-    init(youtubeView: VideoElement, movie: MoviesResponse) {
+    init(youtubeView: VideoElement, movie: MoviesResponse, genres: GenresFilm) {
         self.youtubeView = youtubeView
         self.movie = movie
+        self.genres = genres
     }
 }

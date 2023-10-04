@@ -36,6 +36,7 @@
 		24F207A32AC2B22300651E4A /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F207A22AC2B22300651E4A /* ReviewTableViewCell.swift */; };
 		24F207A52AC2D80B00651E4A /* ReviewMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F207A42AC2D80B00651E4A /* ReviewMoviesViewModel.swift */; };
 		24F207A82AC5892500651E4A /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = 24F207A72AC5892500651E4A /* netfox */; };
+		24F207AA2AC8063B00651E4A /* GenresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F207A92AC8063B00651E4A /* GenresViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		24F207A02AC2ADA300651E4A /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		24F207A22AC2B22300651E4A /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		24F207A42AC2D80B00651E4A /* ReviewMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewMoviesViewModel.swift; sourceTree = "<group>"; };
+		24F207A92AC8063B00651E4A /* GenresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				24F2078E2ABAA46800651E4A /* MoviesGenreViewModel.swift */,
 				24F2079A2ABC612800651E4A /* DetailMoviewViewModel.swift */,
 				24F207A42AC2D80B00651E4A /* ReviewMoviesViewModel.swift */,
+				24F207A92AC8063B00651E4A /* GenresViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				24F207A52AC2D80B00651E4A /* ReviewMoviesViewModel.swift in Sources */,
 				248502852AAA293500EE62B6 /* MainTabBarViewController.swift in Sources */,
 				24F2078D2AB9F13F00651E4A /* MoviesGenreTableViewCell.swift in Sources */,
+				24F207AA2AC8063B00651E4A /* GenresViewModel.swift in Sources */,
 				24F2079F2AC1EA2200651E4A /* ReviewMovie.swift in Sources */,
 				248502812AAA293500EE62B6 /* AppDelegate.swift in Sources */,
 				24F207A32AC2B22300651E4A /* ReviewTableViewCell.swift in Sources */,
