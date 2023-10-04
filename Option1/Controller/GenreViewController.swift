@@ -9,7 +9,7 @@ import UIKit
 
 class GenreViewController: UIViewController, GenresViewControllerDelegate {
     
-    private var data: [Data] = [Data]()
+    private var data: [MoviesResponse] = [MoviesResponse]()
     
     var movies = [[String:Any]]()
     

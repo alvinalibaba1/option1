@@ -16,7 +16,7 @@ class FilterGenreViewController: UIViewController{
     
     weak var delegate: GenresViewControllerDelegate?
     
-    private var data: [Data] = [Data]()
+    private var data: [MoviesResponse] = [MoviesResponse]()
     
     private var genres: [GenresFilm ] = [GenresFilm]()
     

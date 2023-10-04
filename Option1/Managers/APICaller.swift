@@ -8,6 +8,10 @@
 import Foundation
 
 
+enum idMovies: Int {
+    case id
+}
+
 struct Constants  {
     static let API_KEY = "3651a4275e6ef581913cf914516b44e5"
     static let baseURL = "https://api.themoviedb.org"
@@ -24,7 +28,7 @@ class APICaller {
     static let shared = APICaller()
     
     
-    func getGenreMovies(completion: @escaping  (Result<[Data], Error>) -> Void) {
+    func getGenreMovies(completion: @escaping  (Result<[MoviesResponse], Error>) -> Void) {
         
         guard let url = URL(string: "\(Constants.baseURL)/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=14&api_key=\(Constants.API_KEY)") else {return}
         
@@ -47,7 +51,7 @@ class APICaller {
     
     
     
-    func getActionMovies(completion: @escaping (Result<[Data],Error>) -> Void) {
+    func getActionMovies(completion: @escaping (Result<[MoviesResponse],Error>) -> Void) {
         
         guard let url = URL(string: "\(Constants.baseURL)/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=28&api_key=\(Constants.API_KEY)") else { return }
         
@@ -71,7 +75,7 @@ class APICaller {
     }
     
     
-    func getThrillerMovie(completion: @escaping (Result<[Data],Error>) -> Void) {
+    func getThrillerMovie(completion: @escaping (Result<[MoviesResponse],Error>) -> Void) {
         guard let url = URL(string: "\(Constants.baseURL)/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=36&api_key=\(Constants.API_KEY)") else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _ , error in
@@ -89,7 +93,7 @@ class APICaller {
         task.resume()
     }
     
-    func getRomanceMovie(completion: @escaping (Result<[Data],Error>) -> Void) {
+    func getRomanceMovie(completion: @escaping (Result<[MoviesResponse],Error>) -> Void) {
         guard let url = URL(string: "\(Constants.baseURL)/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=10749&api_key=\(Constants.API_KEY)") else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _ , error in
@@ -108,7 +112,7 @@ class APICaller {
     }
     
     
-    func getWarMovie(completion: @escaping (Result<[Data],Error>) -> Void) {
+    func getWarMovie(completion: @escaping (Result<[MoviesResponse],Error>) -> Void) {
         guard let url = URL(string: "\(Constants.baseURL)/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=10752&api_key=\(Constants.API_KEY)") else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _ , error in
@@ -127,7 +131,7 @@ class APICaller {
     }
     
     
-    func getTopRatedMovie(completion: @escaping (Result<[Data],Error>) -> Void) {
+    func getTopRatedMovie(completion: @escaping (Result<[MoviesResponse],Error>) -> Void) {
         guard let url = URL(string: "\(Constants.baseURL)/3/movie/popular?language=en-US&page=1&api_key=\(Constants.API_KEY)") else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _ , error in
@@ -146,7 +150,7 @@ class APICaller {
     }
     
     
-    func getFilterGenreMovie(with query: String, completion: @escaping (Result<[Data],Error>) -> Void) {
+    func getFilterGenreMovie(with query: String, completion: @escaping (Result<[MoviesResponse],Error>) -> Void) {
         guard let url = URL(string: "\(Constants.baseURL)/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=\(query)&api_key=\(query)\(Constants.API_KEY)") else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _ , error in
@@ -206,6 +210,32 @@ class APICaller {
             }
         }
         task.resume()
+    }
+    
+
+    
+    
+    func getReviewsMovie(idMovie: Int, completion: @escaping (Result<[ReviewsMovie], Error>) -> Void) {
+        
+        guard let url = URL(string: "\(Constants.baseURL)/3/movie/\(idMovie)/reviews?language=en-US&page=1&api_key=\(Constants.API_KEY)") else { return }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _ , error in
+            guard let data = data , error == nil else {
+                return
+            }
+            
+            do {
+                let results = try JSONDecoder().decode(ReviewMoviesResponse.self, from: data)
+                completion(.success(results.results))
+                print(results)
+                
+            } catch {
+                completion(.failure(error))
+                print(error.localizedDescription)
+            }
+        }
+        task.resume()
+            
     }
     
 
